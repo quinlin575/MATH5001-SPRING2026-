@@ -1,0 +1,245 @@
+6.4s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.4s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.4s	3	0.00s - to python to disable frozen modules.
+6.4s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.0s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.0s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.0s	7	0.00s - to python to disable frozen modules.
+7.0s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.0s	9	Hyperparameters defined.
+8.0s	10	Epochs: 25
+8.0s	11	Learning Rate: 0.001
+8.0s	12	Batch Size: 32
+8.0s	13	Dropout Rate: 0.25
+9.0s	14	DATA ROOT: /kaggle/input/datasets/organizations/nih-chest-xrays/data
+9.0s	15	
+9.0s	16	Top-level folders:
+9.0s	17	['images_003', 'images_012', 'LOG_CHESTXRAY.pdf', 'README_CHESTXRAY.pdf', 'BBox_List_2017.csv', 'images_009', 'images_008', 'images_007', 'test_list.txt', 'images_010', 'ARXIV_V5_CHESTXRAY.pdf', 'images_002', 'images_011', 'Data_Entry_2017.csv', 'images_001', 'train_val_list.txt', 'images_005', 'FAQ_CHESTXRAY.pdf', 'images_004', 'images_006']
+9.0s	18	
+9.0s	19	Expected CSV path: /kaggle/input/datasets/organizations/nih-chest-xrays/data/Data_Entry_2017.csv
+9.0s	20	
+9.0s	21	Loaded CSV shape: (112120, 12)
+9.0s	22	
+9.0s	23	Columns:
+9.0s	24	['Image Index', 'Finding Labels', 'Follow-up #', 'Patient ID', 'Patient Age', 'Patient Gender', 'View Position', 'OriginalImage[Width', 'Height]', 'OriginalImagePixelSpacing[x', 'y]', 'Unnamed: 11']
+9.2s	25	Indexing images... (this may take ~10-20s)
+10.2s	26	Total images indexed: 112120
+10.2s	27	Usable samples after mapping: 112120
+10.2s	28	Final training subset size: 112120
+10.2s	29	
+10.2s	30	Sample rows:
+10.2s	31	        Image Index          Finding Labels  \
+10.2s	32	0  00000001_000.png            Cardiomegaly   
+10.2s	33	1  00000001_001.png  Cardiomegaly|Emphysema   
+10.2s	34	2  00000001_002.png   Cardiomegaly|Effusion   
+10.2s	35	3  00000002_000.png              No Finding   
+10.2s	36	4  00000003_000.png                  Hernia   
+10.2s	37	
+10.2s	38	                                                path  
+10.2s	39	0  /kaggle/input/datasets/organizations/nih-chest...  
+10.2s	40	1  /kaggle/input/datasets/organizations/nih-chest...  
+10.2s	41	2  /kaggle/input/datasets/organizations/nih-chest...  
+10.2s	42	3  /kaggle/input/datasets/organizations/nih-chest...  
+10.2s	43	4  /kaggle/input/datasets/organizations/nih-chest...  
+21.3s	44	Classes: ['Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Effusion', 'Emphysema', 'Fibrosis', 'Hernia', 'Infiltration', 'Mass', 'Nodule', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']
+21.3s	45	Num classes: 14
+21.3s	46	
+21.3s	47	Number of extra features: 5
+21.3s	48	Extra feature columns: ['Patient Age (scaled)', 'Gender_F', 'Gender_M', 'ViewPos_AP', 'ViewPos_PA']
+21.3s	49	
+21.3s	50	Calculating dataset mean and standard deviation for normalization...
+1480.3s	51	Calculated Mean: 0.4981
+1480.3s	52	Calculated Std:  0.2281
+1480.3s	53	
+1480.3s	54	Image shape: torch.Size([1, 224, 224])
+1480.3s	55	Extra features: tensor([0.6591, 0.0000, 1.0000, 0.0000, 1.0000])
+1480.3s	56	Extra features shape: torch.Size([5])
+1480.3s	57	Label vector: tensor([0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+1480.6s	58	Using device: cuda
+1480.6s	59	Unique patients: 30805
+1480.7s	60	Train patients: 24644
+1480.7s	61	Val patients: 6161
+1480.7s	62	Train samples: 89826
+1480.7s	63	Val samples: 22294
+1480.7s	64	Patient-level DataLoaders ready
+1480.7s	65	Class weights computed
+1480.8s	66	Model initialized
+1480.8s	67	Loss + optimizer ready
+1480.8s	68	Starting training...
+1480.8s	69	
+2841.9s	70	Saved best model
+2841.9s	71	Epoch [1/25]
+2841.9s	72	Train Loss: 1.2578
+2841.9s	73	Val Loss:   1.2207
+2841.9s	74	Val AUC:    0.6636033853108568
+2841.9s	75	Time taken: 1361.10s
+2841.9s	76	------------------------------
+4216.6s	77	Saved best model
+4216.6s	78	Epoch [2/25]
+4216.6s	79	Train Loss: 1.2224
+4216.6s	80	Val Loss:   1.2325
+4216.6s	81	Val AUC:    0.671879896418378
+4216.6s	82	Time taken: 1374.67s
+4216.6s	83	------------------------------
+5581.5s	84	Saved best model
+5581.5s	85	Epoch [3/25]
+5581.5s	86	Train Loss: 1.2066
+5581.5s	87	Val Loss:   1.1970
+5581.5s	88	Val AUC:    0.6930478760376874
+5581.5s	89	Time taken: 1364.91s
+5581.5s	90	------------------------------
+6915.6s	91	Saved best model
+6915.6s	92	Epoch [4/25]
+6915.6s	93	Train Loss: 1.1875
+6915.6s	94	Val Loss:   1.1747
+6915.6s	95	Val AUC:    0.7138592811641623
+6915.6s	96	Time taken: 1334.13s
+6915.6s	97	------------------------------
+8277.7s	98	Saved best model
+8277.7s	99	Epoch [5/25]
+8277.7s	100	Train Loss: 1.1669
+8277.7s	101	Val Loss:   1.1540
+8277.7s	102	Val AUC:    0.7276371002628581
+8277.7s	103	Time taken: 1362.10s
+8277.7s	104	------------------------------
+9622.8s	105	Saved best model
+9622.8s	106	Epoch [6/25]
+9622.8s	107	Train Loss: 1.1396
+9622.8s	108	Val Loss:   1.1355
+9622.8s	109	Val AUC:    0.7385275170621679
+9622.8s	110	Time taken: 1345.10s
+9622.8s	111	------------------------------
+10950.1s	112	Saved best model
+10950.1s	113	Epoch [7/25]
+10950.1s	114	Train Loss: 1.1195
+10950.1s	115	Val Loss:   1.1123
+10950.1s	116	Val AUC:    0.7540678707120954
+10950.1s	117	Time taken: 1327.31s
+10950.1s	118	------------------------------
+12287.3s	119	Saved best model
+12287.3s	120	Epoch [8/25]
+12287.3s	121	Train Loss: 1.0950
+12287.3s	122	Val Loss:   1.0949
+12287.3s	123	Val AUC:    0.7665866867971376
+12287.3s	124	Time taken: 1337.15s
+12287.3s	125	------------------------------
+13559.0s	126	Saved best model
+13559.0s	127	Epoch [9/25]
+13559.0s	128	Train Loss: 1.0791
+13559.0s	129	Val Loss:   1.0826
+13559.0s	130	Val AUC:    0.7720907707454329
+13559.0s	131	Time taken: 1271.77s
+13559.0s	132	------------------------------
+14826.6s	133	Saved best model
+14826.6s	134	Epoch [10/25]
+14826.6s	135	Train Loss: 1.0617
+14826.6s	136	Val Loss:   1.0895
+14826.6s	137	Val AUC:    0.7767195344759423
+14826.6s	138	Time taken: 1267.52s
+14826.6s	139	------------------------------
+16122.4s	140	Saved best model
+16122.4s	141	Epoch [11/25]
+16122.4s	142	Train Loss: 1.0464
+16122.4s	143	Val Loss:   1.0853
+16122.4s	144	Val AUC:    0.7814062277746057
+16122.4s	145	Time taken: 1295.81s
+16122.4s	146	------------------------------
+17406.8s	147	Epoch [12/25]
+17406.8s	148	Train Loss: 1.0326
+17406.8s	149	Val Loss:   1.0793
+17406.8s	150	Val AUC:    0.7792781009406855
+17406.8s	151	Time taken: 1284.45s
+17406.8s	152	------------------------------
+18691.4s	153	Epoch [13/25]
+18691.4s	154	Train Loss: 1.0192
+18691.4s	155	Val Loss:   1.0739
+18691.4s	156	Val AUC:    0.7772966815337272
+18691.4s	157	Time taken: 1284.53s
+18691.4s	158	------------------------------
+20008.1s	159	Saved best model
+20008.1s	160	Epoch [14/25]
+20008.1s	161	Train Loss: 1.0053
+20008.1s	162	Val Loss:   1.0619
+20008.1s	163	Val AUC:    0.7883670203627454
+20008.1s	164	Time taken: 1316.76s
+20008.1s	165	------------------------------
+21354.0s	166	Epoch [15/25]
+21354.0s	167	Train Loss: 0.9900
+21354.0s	168	Val Loss:   1.0525
+21354.0s	169	Val AUC:    0.7883304819689112
+21354.0s	170	Time taken: 1345.85s
+21354.0s	171	------------------------------
+22633.9s	172	Epoch [16/25]
+22633.9s	173	Train Loss: 0.9815
+22633.9s	174	Val Loss:   1.0631
+22633.9s	175	Val AUC:    0.7881392202924689
+22633.9s	176	Time taken: 1279.94s
+22633.9s	177	------------------------------
+23932.4s	178	Epoch [17/25]
+23932.4s	179	Train Loss: 0.9679
+23932.4s	180	Val Loss:   1.0896
+23932.4s	181	Val AUC:    0.7876921270175673
+23932.4s	182	Time taken: 1298.53s
+23932.4s	183	------------------------------
+25236.8s	184	Saved best model
+25236.8s	185	Epoch [18/25]
+25236.8s	186	Train Loss: 0.9563
+25236.8s	187	Val Loss:   1.0628
+25236.8s	188	Val AUC:    0.7967326114650223
+25236.8s	189	Time taken: 1304.42s
+25236.8s	190	------------------------------
+26506.3s	191	Epoch [19/25]
+26506.3s	192	Train Loss: 0.9426
+26506.3s	193	Val Loss:   1.0824
+26506.3s	194	Val AUC:    0.7954654497413773
+26506.3s	195	Time taken: 1269.41s
+26506.3s	196	------------------------------
+27772.6s	197	Epoch [20/25]
+27772.6s	198	Train Loss: 0.9290
+27772.6s	199	Val Loss:   1.0844
+27772.6s	200	Val AUC:    0.7963630824040024
+27772.6s	201	Time taken: 1266.35s
+27772.6s	202	------------------------------
+29024.2s	203	Epoch [21/25]
+29024.2s	204	Train Loss: 0.9204
+29024.2s	205	Val Loss:   1.1505
+29024.2s	206	Val AUC:    0.7956549940179874
+29024.2s	207	Time taken: 1251.59s
+29024.2s	208	------------------------------
+30295.5s	209	Saved best model
+30295.5s	210	Epoch [22/25]
+30295.5s	211	Train Loss: 0.9104
+30295.5s	212	Val Loss:   1.0503
+30295.5s	213	Val AUC:    0.796750524901044
+30295.5s	214	Time taken: 1271.28s
+30295.5s	215	------------------------------
+31555.1s	216	Saved best model
+31555.1s	217	Epoch [23/25]
+31555.1s	218	Train Loss: 0.8968
+31555.1s	219	Val Loss:   1.0978
+31555.1s	220	Val AUC:    0.7979014252414569
+31555.1s	221	Time taken: 1259.66s
+31555.1s	222	------------------------------
+32853.2s	223	Epoch [24/25]
+32853.2s	224	Train Loss: 0.8844
+32853.2s	225	Val Loss:   1.1828
+32853.2s	226	Val AUC:    0.79503059057341
+32853.2s	227	Time taken: 1298.10s
+32853.2s	228	------------------------------
+34145.2s	229	Saved best model
+34145.2s	230	Epoch [25/25]
+34145.2s	231	Train Loss: 0.8761
+34145.2s	232	Val Loss:   1.1493
+34145.2s	233	Val AUC:    0.7985219083864029
+34145.2s	234	Time taken: 1291.90s
+34145.2s	235	------------------------------
+34145.2s	236	Saved metrics to: /kaggle/working/metrics.csv
+34145.2s	237	Training complete.
+34150.9s	238	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+34150.9s	239	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+34151.2s	240	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+34151.2s	241	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+34152.0s	242	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+34152.3s	243	[NbConvertApp] Writing 47032 bytes to __notebook__.ipynb
+34154.7s	244	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+34155.8s	245	[NbConvertApp] Writing 372061 bytes to __results__.html
